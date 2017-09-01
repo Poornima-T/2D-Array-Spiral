@@ -3,23 +3,23 @@
 
 void main()
 {
-  int **arr, n, i, j, m, l;
+  int **arr, n, i, j, m, l;                                                  //variable declarations
   
-  printf("\nEnter n..  ");
-  scanf("%d", &n);
+  printf("\nEnter n..  ");                                                   
+  scanf("%d", &n);                                                           //Input Matrix Size
   
-  arr = (int **)malloc(n * sizeof(int*));
+  arr = (int **)malloc(n * sizeof(int*));                             //Dynamic Memory Allocation for array of pointers
   
   for(i=0; i<n; i++)
-    arr[i] = (int *)malloc(n * sizeof(int));
+    arr[i] = (int *)malloc(n * sizeof(int));                          // Allocating memory for array of integers
     
   printf("\nEnter the array elements..\n");
   
   for(i=0; i<n; i++)
     for(j=0; j<n; j++)
-      scanf("%d", &arr[i][j]);
+      scanf("%d", &arr[i][j]);                                       //Reading n*n array eleements
       
-  printf("\n\nORIGINAL MATRIX\n\n");
+  printf("\n\nORIGINAL MATRIX\n\n");                                 //Printing Original 2D Array
   
   for(i=0; i<n; i++)
   {
@@ -29,7 +29,7 @@ void main()
     printf("\n");
   }
   
-  printf("\n\nSPIRAL MATRIX\n\n");
+  printf("\n\nSPIRAL MATRIX\n\n");                                  //Printing in Spiral Format
  
   i=0; j=0; m=n; l=0;
   
